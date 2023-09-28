@@ -9,7 +9,12 @@ namespace AnonymousDelegates
         static void Main(string[] args)
         {
             // TODO: Implement an anonymous delegate
-
+            // inline delegates increase the readability. 
+            MyDelegate del = delegate(int arg1, int arg2)
+            {
+                return (arg1 + arg2).ToString();
+            };
+            Console.WriteLine("The number from the anonymous delegate is: " + del(10, 20));
         }
     }
 }
