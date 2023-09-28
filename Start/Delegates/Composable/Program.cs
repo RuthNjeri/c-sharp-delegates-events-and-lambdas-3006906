@@ -3,6 +3,7 @@
 namespace Composable
 {
     // declare the delegate type
+    // Composable - delegates that can be chained together, each called according to the order chained. 
     public delegate void MyDelegate(int arg1, int arg2);
 
     class Program
