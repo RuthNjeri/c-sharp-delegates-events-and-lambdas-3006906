@@ -20,7 +20,7 @@ namespace Composable
         }
         static void Main(string[] args)
         {
-            MyDelegate f1 = func1;
+            MyDelegate f1 = new MyDelegate(func1);
             MyDelegate f2 = func2;
             // Create a composed delegate from f1 and f2
 
@@ -33,12 +33,14 @@ namespace Composable
             Console.WriteLine("Calling the second delegate");
             f2(a, b);
             // TODO: Call the composed delegate
+            MyDelegate f1f2 = f1 + f2;
             Console.WriteLine("\nCalling the chained delegates");
-
+            f1f2(a, b);
 
             // TODO: subtract off one of the delegates
             Console.WriteLine("\nCalling the unchained delegates");
-
+            f1f2 -= f1;
+            f1f2(b, b);
         }
     }
 }

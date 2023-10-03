@@ -56,9 +56,7 @@ namespace DelegatesSolution
         }
 
         public override void calcFees(decimal price, ref decimal fee)
-        {
-            fee = price * 0.12m;
-        }
+
     }
 
     class Dest_Zone3: ShippingDestination
